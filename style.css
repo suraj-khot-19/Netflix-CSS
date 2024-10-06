@@ -11,10 +11,11 @@
 }
 
 body {
-    background-color: #232323;
+    background-color: black;
+    overflow-x: hidden;
 }
 
-/* background */
+/*! background */
 .flex {
     display: flex;
     justify-content: center;
@@ -22,7 +23,7 @@ body {
 }
 
 .bg {
-    height: 90vh;
+    height: 85vh;
     background: url('./assets/netflix-bg.jpg');
     position: relative;
     background-repeat: no-repeat;
@@ -34,7 +35,7 @@ body {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100%;
+    height: 85vh;
     background-color: black;
     opacity: 0.7;
 }
@@ -55,18 +56,14 @@ body {
 
 .language-btn {
     color: whitesmoke;
-    border: 0.1px solid #ffffffed;
+    border: 0.1px solid rgba(132, 127, 127, 0.8);
     border-radius: 4px;
     font-size: 1.1rem;
 }
 
-.language-btn :hover {
-    font-weight: 400;
-}
-
-/* background image with text */
+/*! background image with text */
 .main-span {
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +78,6 @@ body {
 
 .main-span>:nth-child(1) {
     font-weight: bold;
-    /* width: max(411px, 45vw); */
     font-size: max(2.5rem, 4vw);
 }
 
@@ -113,10 +109,92 @@ body {
 .input-btn .button {
     font-weight: 400;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border-radius: 0.3rem;
+    line-height: 50px;
 }
 
+.divider {
+    position: relative;
+    height: 0.3rem;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}
+
+/*! treding  */
+.trending {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.trending p {
+    margin: 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.treding-div {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.trending-btn {
+    background-color: rgba(53, 53, 53, 0.5);
+    width: fit-content;
+    margin: 0.5rem 1rem;
+    padding: 0.3rem;
+    border-radius: 6px;
+    border: 0.1px solid rgba(132, 127, 127, 0.8);
+}
+
+/* !    section 1 */
+.section {
+    width: 70vw;
+    color: white;
+    margin: 0 auto;
+}
+
+.section-imgvid {
+    position: relative;
+}
+
+.section-imgvid img {
+    width: 35vw;
+    position: relative;
+    z-index: 10;
+}
+
+.section-imgvid video {
+    position: absolute;
+    z-index: -10;
+    top: 4vw;
+    width: 30vw;
+    right: 0;
+    overflow: hidden;
+}
+
+.section-span {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-span>:first-child {
+    font-weight: bold;
+    font-size: max(3vw, 1.6rem);
+}
+
+.section-span>:nth-child(2) {
+    font-weight: 400;
+    font-size: max(1.5vw, 0.75rem);
+}
+
+.section-divider {
+    height: 0.05rem;
+    margin: 1.8rem 0;
+}
+
+/*! media */
 @media(max-width:500px) {
     .symbol img {
         height: 3.5rem;
@@ -133,14 +211,42 @@ body {
     .input-btn {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
     }
 
-    .input-btn input {
+    .input-btn input,
+    .button,
+    .trending-btn {
         width: 100%;
+        font-size: 1rem;
     }
 
     .main-span {
         padding: 0px 2rem;
+    }
+
+    .main-span>:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .navbar,
+    .section {
+        width: 90vw;
+    }
+
+    .bg,
+    .cover-bg {
+        height: 70vh;
+    }
+
+    .section-span>:first-child {
+        font-size: 1.2rem;
+        line-height: 25px;
+        font-weight: 700;
+    }
+
+    .section-span>:nth-child(2) {
+        font-size: 0.8rem;
     }
 }
 
