@@ -462,6 +462,9 @@ body {
         font-size: 0.3rem;
         font-weight: 400;
     }
+    .footer-input .footer-button{
+        width: fit-content;
+    }
 }
 
 @media(max-width:306px) {
