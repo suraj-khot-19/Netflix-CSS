@@ -242,7 +242,6 @@ body {
     flex-direction: column;
     gap: 15px;
     flex-wrap: wrap;
-
 }
 
 .footer-input input {
@@ -251,7 +250,7 @@ body {
 
 .footer-input .footer-button {
     background-color: #D81F26;
-    width: 30%;
+    width: calc(fit-content, -20px);
     font-weight: 700;
     color: white;
     font-size: 1.2rem;
@@ -356,7 +355,9 @@ body {
 }
 
 
+
 /*! media */
+
 @media(max-width:500px) {
     .symbol img {
         height: 4rem;
